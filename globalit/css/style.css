@@ -32,11 +32,12 @@ footer{
     text-align: center;
 }
 .navbar{
-    background-color: white;
+    background-color: #4E5968;
     border-bottom: none;
+    opacity: 0.7;
 }
 .navbar a{
-    color: #4E5968 !important;
+    color: white !important;
 }
 
 @media screen and (max-width:767px){
