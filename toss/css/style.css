@@ -10,9 +10,14 @@ body{
 .navbar a {
     color: #425968 !important;
 }
+
 .navbar-brand{
     position: absolute;
     top:-17px !important;
+}
+
+.border1{
+    border-bottom: solid 1px #ccd0d1;
 }
 #main{
     width:100%;
