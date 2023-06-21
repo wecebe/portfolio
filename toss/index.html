@@ -10,9 +10,47 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
    
     <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Nanum+Gothic&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        $(document).ready(function(){
+            console.log($("#box2").offset().top);
+            console.log($(document).height());
+            console.log($("#box1").height());
+            console.log($("#box2").height());
+
+            $(window).scroll(function(){
+                console.log($(window).scrollTop());
+                if($(window).scrollTop()>4000){
+                    $("#ani1").addClass("animate__animated").addClass("animate__slideInLeft");
+                }
+
+               
+            });
+            $(window).scroll(function(){
+                console.log($(window).scrollTop());
+                if($(window).scrollTop()>4300){
+                    $("#ani2").addClass("animate__animated").addClass("animate__slideInLeft");
+                }
+
+               
+            });
+            $(window).scroll(function(){
+                console.log($(window).scrollTop());
+                if($(window).scrollTop()>4200){
+                    $("#ani3").addClass("animate__animated").addClass("animate__slideInRight");
+                }
+
+               
+            });
+
+            
+            
+        });
+    </script>
 
 
 
@@ -266,10 +304,10 @@
             </h1>
         </div>
         <div class="row pc">
-            <div class="col-sm-8">
+            <div id="ani1" class="col-sm-8">
                 <img class="pic04" src="img/section2_2_insu_01.jpg" alt="보험1">
             </div>
-            <div class="col-sm-4" style="padding-top: 250px;">                
+            <div id="ani3" class="col-sm-4" style="padding-top: 250px;">                
                 <img class="pic05" src="img/section2_2_insu_02.jpg" alt="보험2">
                 <p>
                     또래보다 보험료는 적절하게 내고 있는지, <br>
@@ -280,7 +318,7 @@
                 </p>               
             </div>
         </div>        
-        <div>
+        <div id="ani2">
             <h2>
                 보험<br>
                 조회부터 상담,<br>
