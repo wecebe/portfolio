@@ -20,7 +20,18 @@
             console.log($("#box2").offset().top);
             console.log($(document).height());
             console.log($("#box1").height());
-            console.log($("#box2").height());
+            console.log($("#box2").height());    
+            
+
+            
+            $(window).scroll(function(){
+                console.log($(window).scrollTop());
+                if($(window).scrollTop()>300){
+                    $("#ani0").addClass("border1");
+                }else{
+                    $("#ani0").removeClass("border1");
+                }
+            });
 
             $(window).scroll(function(){
                 console.log($(window).scrollTop());
@@ -32,7 +43,7 @@
             });
             $(window).scroll(function(){
                 console.log($(window).scrollTop());
-                if($(window).scrollTop()>4300){
+                if($(window).scrollTop()>4000){
                     $("#ani2").addClass("animate__animated").addClass("animate__slideInLeft");
                 }
 
@@ -46,8 +57,7 @@
 
                
             });
-
-            
+       
             
         });
     </script>
@@ -57,8 +67,8 @@
 </head>
 <body>
     <!--navigation-->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+    <nav id="ani0" class="navbar navbar-default navbar-fixed-top">
+        <div  class="container">   
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
